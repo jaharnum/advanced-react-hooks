@@ -36,7 +36,7 @@ function fetchPokemon(name, delay = 1500) {
       },
       body: JSON.stringify({
         query: pokemonQuery,
-        variables: {name: name.toLowerCase()},
+        variables: {name: name.toString().toLowerCase()},
       }),
     })
     .then(async response => {
