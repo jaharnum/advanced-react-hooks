@@ -4,7 +4,8 @@
 import * as React from 'react'
 
 // 🐨 wrap this in a React.forwardRef and accept `ref` as the second argument
-const MessagesDisplay = React.forwardRef(function MessagesDisplay({messages}, ref) {
+// you can just remove the name of the function to solve confusion about which one youre calling
+const MessagesDisplay = React.forwardRef(({messages}, ref) => {
   const containerRef = React.useRef()
   React.useLayoutEffect(() => {
     scrollToBottom()
